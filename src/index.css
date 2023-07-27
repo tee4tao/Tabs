@@ -1,0 +1,113 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  /* min-height: 100vh; */
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+.tab-container {
+  width: 80%;
+  margin-top: 3rem;
+  max-width: 1200px;
+}
+.tab-btns {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.tab-btn {
+  border: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+.tab-btn:hover {
+  border-bottom: 3px solid #14b8a6;
+  color: #14b8a6;
+}
+.focus {
+  border-bottom: 3px solid #14b8a6;
+  color: #14b8a6;
+}
+.user-job {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.user-name {
+  text-transform: uppercase;
+  background-color: #cbd5e1;
+  padding: 5px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  border-radius: 5px;
+}
+.user-experience {
+  color: #64748b;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.user-info {
+  margin-left: 2rem;
+  color: #334155;
+  line-height: 1.5;
+  /* font-size: 1.1rem; */
+}
+.icon {
+  color: #14b8a6;
+  font-size: 1.3rem;
+}
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid #94a3b8;
+  border-radius: 50%;
+  border-top-color: #10b981;
+  animation: spinner 0.6s linear infinite;
+  margin: 1rem auto;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .tab-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .tab-btns {
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 1rem;
+  }
+  .focus {
+    border-left: 3px solid #14b8a6;
+    border-bottom: none;
+    color: #14b8a6;
+  }
+  .tab-btn:hover {
+    border-left: 3px solid #14b8a6;
+    color: #14b8a6;
+    border-bottom: none;
+  }
+}
